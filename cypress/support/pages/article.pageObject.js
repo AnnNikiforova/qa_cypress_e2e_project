@@ -52,9 +52,16 @@ class ArticlePageObject extends PageObject {
   }
 
   createArticle(title, description, body) {
-    this.typeTitle(title);
-    this.typeDescription(description);
-    this.typeBody(body);
+    this.titleField.clear().type(title);
+    this.descriptionField.clear().type(description);
+    this.bodyField.clear().type(body);
+    this.clickPublishArticleBtn();
+  }
+
+  updateArticle(title, description, body) {
+    this.titleField.clear().type(title);
+    this.descriptionField.clear().type(description);
+    this.bodyField.clear().type(body);
     this.clickPublishArticleBtn();
   }
 }

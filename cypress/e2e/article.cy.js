@@ -41,7 +41,7 @@ describe('Article', () => {
         articlePage.visit(`#/articles/${response.body.article.slug}`);
         articlePage.editArticleBtn.first().click();
         articlePage
-          .createArticle(article.title, article.description, article.body);
+          .updateArticle(article.title, article.description, article.body);
         cy.get('h1').should('contain', article.title);
         cy.get('.article-content').should('contain', article.body);
       });

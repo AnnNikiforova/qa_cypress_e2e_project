@@ -42,7 +42,7 @@ describe('Sign Up page', () => {
       signUpPage.register(
         invalidData.email,
         user.username,
-        user.username
+        user.password
       );
 
       signUpPage.assertErrorMessage('Email must be a valid email.');
