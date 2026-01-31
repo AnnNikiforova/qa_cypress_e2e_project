@@ -4,15 +4,15 @@ class HomePageObject extends PageObject {
   url = '/#/';
 
   get usernameLink() {
-    return cy.getByDataCy('username-link');
+    return cy.getByDataQa('username-link');
   }
 
   get settingsLink() {
-    return cy.getByDataCy('settings-link');
+    return cy.getByDataQa('settings-link');
   }
 
   get newArticleLink() {
-    return cy.getByDataCy('new-article-link');
+    return cy.getByDataQa('new-article-link');
   }
 
   clickNewArticleLink() {

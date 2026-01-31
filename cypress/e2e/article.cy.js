@@ -31,8 +31,8 @@ describe('Article', () => {
   it('should be created using New Article form', () => {
     articlePage.visit();
     articlePage.createArticle(article.title, article.description, article.body);
-    articlePage.titleField.should('contain', article.title);
-    articlePage.bodyField.should('contain', article.body);
+    cy.get('h1').should('contain', article.title);
+    cy.get('.article-content').should('contain', article.body);
   });
 
   it('should be edited using Edit button', () => {
@@ -42,8 +42,8 @@ describe('Article', () => {
         articlePage.editArticleBtn.first().click();
         articlePage
           .createArticle(article.title, article.description, article.body);
-        articlePage.titleField.should('contain', article.title);
-        articlePage.bodyField.should('contain', article.body);
+        cy.get('h1').should('contain', article.title);
+        cy.get('.article-content').should('contain', article.body);
       });
   });
 

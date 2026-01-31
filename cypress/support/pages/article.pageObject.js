@@ -4,27 +4,27 @@ class ArticlePageObject extends PageObject {
   url = '#/editor';
 
   get titleField() {
-    return cy.getByDataCy('title-article');
+    return cy.getByDataQa('title-article');
   }
 
   get descriptionField() {
-    return cy.getByDataCy('description-article');
+    return cy.getByDataQa('description-article');
   }
 
   get bodyField() {
-    return cy.getByDataCy('body-article');
+    return cy.getByDataQa('body-article');
   }
 
   get publishArticleBtn() {
-    return cy.getByDataCy('publish-article-btn');
+    return cy.getByDataQa('publish-article-btn');
   }
 
   get editArticleBtn() {
-    return cy.getByDataCy('edit-article-btn');
+    return cy.getByDataQa('edit-article-btn');
   }
 
   get deleteArticleBtn() {
-    return cy.getByDataCy('delete-article-btn');
+    return cy.getByDataQa('delete-article-btn');
   }
 
   typeTitle(title) {
